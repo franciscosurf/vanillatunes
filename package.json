@@ -1,0 +1,32 @@
+{
+  "name": "vanillatunes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vanilla Javascript ES6 SPA iTunes API search",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w src/assets/scss/ -o src/assets/css app.css --output-style compressed",
+    "dev": "webpack-dev-server --config './webpack.dev.js'",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "Francisco Molina Montenegro",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "es6-symbol": "^3.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "terser": "^3.14.1",
+    "terser-webpack-plugin": "^1.2.2",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  }
+}

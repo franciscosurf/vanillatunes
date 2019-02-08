@@ -1,0 +1,13 @@
+// Mixins
+@import "utils/mixins";
+
+// Common styles whole project
+@import "base/reset";
+@import "base/colors";
+@import "base/wrappers";
+@import "base/helpers";
+@import "base/grid";
+@import "layout/defaults";
+// Theme structure
+@import "layout/layout";
+@import "layout/album";

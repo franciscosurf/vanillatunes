@@ -1,0 +1,33 @@
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color!important;
+  background-color: $color!important;
+}
+
+//    Breakpoints Mixin
+//    THIS MIXIN WORKS ONLY WITH LATEST SASS BETA (at the moment: 06/10/13 01:37:34)
+//    usage: @include bp(tab) {...}
+//------------------------------------------------------------
+@mixin bp($point) {
+  @if $point == mob {
+    @media only screen and (min-width: 481px)  { @content; }
+  }
+  // Small devices (tablets, 768px and up)
+  @if $point == tab {
+    @media only screen and (min-width: 768px)  { @content; }
+  }
+  // Medium devices (desktops, 992px and up)
+  @if $point == lap {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+  // Large devices (large desktops, 1200px and up)
+  @if $point == desk {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+  // XLarge devices (xlarge desktops, 1400px and up)
+  @if $point == desk-large {
+    @media only screen and (min-width: 1400px) { @content; }
+  }
+}
